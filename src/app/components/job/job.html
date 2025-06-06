@@ -1,0 +1,18 @@
+<div>
+  <div class="job" *ngIf="job">
+    <p>
+      <strong>{{job.title}} at {{job.company}}</strong> | {{job.startDate}} -
+      {{job.endDate}}
+    </p>
+    <ul>
+      <li *ngFor="let task of job.tasks">{{task}}</li>
+    </ul>
+    <p>Location: {{job.location}}</p>
+    <div *ngIf="job.technologies">
+      <p>Technologies used:</p>
+      <ul>
+        <li *ngFor="let tech of job.technologies">{{tech}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
