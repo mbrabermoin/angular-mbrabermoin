@@ -1,0 +1,70 @@
+[
+  {
+    "id": 3,
+    "title": "Senior React Developer",
+    "company": "Trinetix",
+    "tasks": [
+      "Web apps development.",
+      "Code design.",
+      "Sprints estimation and planning.",
+      "Collaboration with Backend, QA and Design teams."
+    ],
+    "startDate": "2025",
+    "endDate": "Present",
+    "location": "Remote",
+    "technologies": [
+      "AngularJS",
+      "ReactJS",
+      "React Hooks.",
+      "React Router.",
+      "React Forms.",
+      "TypeScript.",
+      "Styling: CSS - Sass - StyledComponents.",
+      "Testing: Jest - React Testing Library - Jasmine."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Senior React Developer",
+    "company": "Globant",
+    "tasks": [
+      "Web and Mobile apps development.",
+      "Code design.",
+      " Sprints estimation and planning.",
+      "Releases and MVPs responsible.",
+      "Front-end team leader.",
+      "Collaboration with Backend, QA and Design teams.",
+      "Collaboration across other project teams.",
+      "Mentoring."
+    ],
+    "startDate": "2016",
+    "endDate": "2025",
+    "location": "Hybrid",
+    "technologies": [
+      "ReactJS",
+      "React Hooks.",
+      "React Router.",
+      "React Forms.",
+      "TypeScript.",
+      "Styling: CSS - Sass - StyledComponents.",
+      "CI/CD",
+      "Jenkins",
+      "Node.js",
+      "Redux",
+      "Testing: Jest - React Testing Library."
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Assistant",
+    "company": "Capra-Brabermoin",
+    "tasks": [
+      "Assisting in daily operations.",
+      "Managing schedules and appointments.",
+      "Handling correspondence and communications."
+    ],
+    "startDate": "2013",
+    "endDate": "Present",
+    "location": "On Site"
+  }
+]
