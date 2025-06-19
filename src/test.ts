@@ -14,7 +14,7 @@ getTestBed().initTestEnvironment(
   platformBrowserTesting()
 );
 
-beforeAll(() => {
+beforeEach(() => {
   TestBed.resetTestEnvironment(); // Reset previo
   getTestBed().initTestEnvironment(
     BrowserTestingModule,
