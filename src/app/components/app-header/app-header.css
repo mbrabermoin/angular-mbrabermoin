@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  padding-inline: 16px;
+  padding-block: 8px;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  justify-content: space-between;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header-links {
+  display: flex;
+  gap: 16px;
+}
+
+.header-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}

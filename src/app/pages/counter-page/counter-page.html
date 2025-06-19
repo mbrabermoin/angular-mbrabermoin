@@ -1,0 +1,16 @@
+<div class="center-container">
+  <p>Counter: {{counter()}}</p>
+  @if (isPrime()) {
+  <p>PRIME</p>
+  } @else {
+  <p>PRIME</p>
+  }
+  <div style="width: 200px; display: flex; flex-direction: column; gap: 10px">
+    <button (click)="increment()">+ 1</button>
+    <button (click)="duplicate()">x 2</button>
+    <button (click)="decrement()">- 1</button>
+    <button (click)="reset()">Reset</button>
+    <button (click)="startLoggingEffect()">Start Logging</button>
+    <button (click)="stopLoggingEffect()">Stop Logging</button>
+  </div>
+</div>

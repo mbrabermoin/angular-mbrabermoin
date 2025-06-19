@@ -1,0 +1,18 @@
+<section class="border">
+  <ng-container *ngIf="rowData() as data">
+    @if (rowData() === undefined || rowData().length === 0) {
+    <p>Cargando o sin datos...</p>
+    } @else {
+    <ag-grid-angular
+      class="ag-theme-alpine"
+      [rowData]="rowData()"
+      [columnDefs]="colDefs"
+      [pagination]="true"
+      [defaultColDef]="{ sortable: true, filter: true, resizable: true }"
+      style="width: 94%; height: 600px"
+    >
+    </ag-grid-angular>
+    <h2><pre>{{ userSignal() | json }}</pre></h2>
+    }
+  </ng-container>
+</section>

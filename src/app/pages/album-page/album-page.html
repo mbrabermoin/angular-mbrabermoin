@@ -1,0 +1,9 @@
+<p>album-page works!</p>
+<mat-form-field>
+  <mat-select placeholder="- Select an album -" [(ngModel)]="selectedAlbumId">
+    <mat-option *ngFor="let album of albums()" [value]="album.id">
+      {{ album.title }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<div *ngIf="selectedAlbumId">Álbum seleccionado: {{ selectedAlbumId() }}</div>

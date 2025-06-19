@@ -1,0 +1,8 @@
+<header class="app-header">
+  <nav><span class="header-title" routerLink="/">HEADER TITLE</span></nav>
+  <div class="header-links">
+    @for(link of links; track link.label){
+    <a [routerLink]="link.url" class="header-link">{{link.label}}</a>
+    }
+  </div>
+</header>

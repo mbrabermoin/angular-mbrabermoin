@@ -1,5 +1,11 @@
 <h2>Job List</h2>
-<div *ngFor="let job of jobs">
-  <job [job]="job"></job>
-  <hr />
-</div>
+<ng-container *ngIf="jobs()">
+  @if (jobs() === undefined || jobs().length === 0) {
+  <p>Cargando o sin datos...</p>
+  } @else {
+  <div *ngFor="let job of jobs()">
+    <job [job]="job"></job>
+    <hr />
+  </div>
+  }
+</ng-container>

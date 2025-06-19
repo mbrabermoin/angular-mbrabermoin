@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './job.css',
 })
 export class Job {
-  @Input() job!: {
+  job = input<{
     title: string;
     company: string;
     tasks: string[];
@@ -17,5 +17,13 @@ export class Job {
     endDate: string;
     location: string;
     technologies: string[];
-  };
+  }>({
+    title: '',
+    company: '',
+    tasks: [],
+    startDate: '',
+    endDate: '',
+    location: '',
+    technologies: [],
+  });
 }

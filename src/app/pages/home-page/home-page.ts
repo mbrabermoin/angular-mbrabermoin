@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { JobsList } from '../../components/jobs-list/jobs-list';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
-  imports: [JobsList],
+  imports: [JobsList, RouterLink],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css',
 })

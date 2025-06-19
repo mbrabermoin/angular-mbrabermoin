@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, computed, inject, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { Job } from '../job/job';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { catchError, of } from 'rxjs';
 
 interface JobDetails {
   title: string;
@@ -20,14 +22,13 @@ interface JobDetails {
   templateUrl: './jobs-list.html',
   styleUrl: './jobs-list.css',
 })
-export class JobsList implements OnInit {
-  jobs: JobDetails[] = [];
+export class JobsList {
+  private http = inject(HttpClient);
 
-  constructor(private http: HttpClient) {}
+  jobsSignal = toSignal<any[], any[]>(
+    this.http.get<any[]>('/assets/jobs.json').pipe(catchError(() => of([]))),
+    { initialValue: [] }
+  );
 
-  ngOnInit() {
-    this.http.get<JobDetails[]>('/assets/jobs.json').subscribe((res) => {
-      this.jobs = res;
-    });
-  }
+  jobs = computed<JobDetails[]>(() => this.jobsSignal() ?? []);
 }

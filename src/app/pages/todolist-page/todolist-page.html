@@ -1,0 +1,41 @@
+<div class="creation-button">
+  <button (click)="createNewTask()">Create a new Task</button>
+</div>
+
+<section class="section new-section" *ngIf="tasksNewCount() > 0">
+  PENDING TASKS
+  <ul>
+    <li *ngFor="let task of tasks()">
+      <article class="todo-item" *ngIf="task.state === TaskState.New">
+        <p>
+          {{task.title}} - Creation Date:
+          {{task.creationDate.toLocaleTimeString()}}
+        </p>
+        <div class="action-buttons">
+          <button (click)="markAsDone(task.title)">Mark as Done</button>
+          <button (click)="removeTask(task.title)">Delete task</button>
+        </div>
+      </article>
+    </li>
+  </ul>
+  <p class="counter">{{tasksNewCount()}} / {{totalTasks()}}</p>
+</section>
+
+<section class="section done-section" *ngIf="tasksDoneCount() > 0">
+  DONE TASKS ✅
+  <ul>
+    <li *ngFor="let task of tasks()">
+      <article class="todo-item" *ngIf="task.state === TaskState.Done">
+        <p>
+          {{task.title}} - Creation Date:
+          {{task.creationDate.toLocaleTimeString()}}
+        </p>
+        <div class="action-buttons">
+          <button (click)="markAsUndone(task.title)">Return to pending</button>
+          <button (click)="removeTask(task.title)">Delete task</button>
+        </div>
+      </article>
+    </li>
+  </ul>
+  <p class="counter">{{tasksDoneCount()}} / {{totalTasks()}}</p>
+</section>
